@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Personal coding profile",
+  "type": "object",
+  "required": ["identity", "preferences", "customRules"],
+  "properties": {
+    "identity": { "type": "object", "required": ["displayName"] },
+    "preferences": { "type": "object" },
+    "customRules": {
+      "type": "array",
+      "items": { "type": "object", "required": ["title", "instruction", "scope", "enabled"] }
+    }
+  }
+}
